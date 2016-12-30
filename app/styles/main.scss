@@ -1,0 +1,160 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.header {
+  margin-bottom: 0;
+  .navbar {
+    border-radius: 0;
+    .navbar-brand {
+      color: #FFF;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .panel {
+    margin-bottom: 0;
+    margin-top: 20px;
+    .panel-footer {
+      padding: 5px 10px;
+    }
+  }
+}
+
+.container {
+  .marvel {
+    margin: 40px 0;
+    .form-area {
+      text-align: center;
+    }
+    .form-control {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 0;
+    }
+    .go-btn {
+      margin: 15px auto 50px auto;
+      width: 100%;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 4px 0;
+    }
+    .help-block {
+      margin-top: 15px;
+    }
+    .character-info {
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.reveal-animation.ng-enter,
+.reveal-animation.ng-leave,
+.reveal-animation.ng-move {
+  position:relative;
+}
+
+.reveal-animation.ng-enter {
+  -webkit-animation: 0.5s repeat-animation-enter;
+  animation: 0.5s repeat-animation-enter;
+}
+
+.reveal-animation.ng-leave {
+  -webkit-animation: 0.5s repeat-animation-leave;
+  animation: 0.5s repeat-animation-leave;
+}
+
+.reveal-animation.ng-move {
+  -webkit-animation: 0.5s repeat-animation-move;
+  animation: 0.5s repeat-animation-move;
+}
+
+@keyframes repeat-animation-enter {
+  from {
+    left:-10px;
+    opacity:0;
+  }
+  to {
+    left:0;
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes repeat-animation-enter {
+  from {
+    left:-10px;
+    opacity:0;
+  }
+  to {
+    left:0;
+    opacity:1;
+  }
+}
+
+@keyframes repeat-animation-leave {
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:-10px;
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes repeat-animation-leave {
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:-10px;
+    opacity:0;
+  }
+}
+
+@keyframes repeat-animation-move {
+  from { opacity:0.5; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes repeat-animation-move {
+  from { opacity:0.5; }
+  to { opacity:1; }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    .marvel {
+      .character-info {
+        img {
+          width: 350px;
+          margin-right: 30px;
+        }
+      }
+      .go-btn {
+        width: 10%;
+      }
+      .form-control {
+        width: 40%
+      }
+    }
+  }
+}
